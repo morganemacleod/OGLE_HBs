@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE version="1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.ivoa.net/xml/VOTable/v1.3"
+  xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.3 http://www.ivoa.net/xml/VOTable/v1.3">
+ <DESCRIPTION>
+   VizieR Astronomical Server vizier.cds.unistra.fr
+    Date: 2024-12-11T15:33:41 [V7.4.2]
+   Explanations and Statistics of UCDs:			See LINK below
+   In case of problem, please report to:	cds-question@unistra.fr
+ </DESCRIPTION>
+<!-- VOTable description at http://www.ivoa.net/Documents/latest/VOT.html -->
+<INFO name="service_protocol" value="ASU">  IVOID of the protocol through which the data was retrieved</INFO>
+<INFO name="request_date" value="2024-12-11T15:33:41">  Query execution date</INFO>
+<INFO name="request" value="https://vizier.cds.unistra.fr/viz-bin/sed?-c=11.357708333333331%20-72.87922222222221&amp;-c.rs=1.0">  Full request URL</INFO>
+<INFO name="contact" value="cds-question@unistra.fr">  Email or URL to contact publisher</INFO>
+<INFO name="server_software" value="7.4.2">  Software version</INFO>
+<INFO name="publisher" value="CDS">  Data centre that produced the VOTable</INFO>
+<INFO name="header_format" value="mini"/>
+<INFO name="MaxTuples" value="50000" />
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO ID="Target" name="-c" value="011.357708-72.879222,rs=1.">
+Constraint -c.rs=1.0</INFO>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+<INFO name="header_format" value="mini"/>
+
+<RESOURCE ID="VizieR_S787246421" name="VizieR(2024-12-11T15:33:41)">
+  <DESCRIPTION>VizieR database maintained by CDS, see http://vizier.cds.unistra.fr</DESCRIPTION>
+  <COOSYS ID="J2000_2000.000" system="eq_FK5" equinox="J2000" epoch="2000.000"/>
+  <COOSYS ID="J2000" system="eq_FK5" equinox="J2000"/>
+  <TIMESYS ID="time_1" refposition="BARYCENTER" timeorigin="0.000000" timescale="TCB"/>
+  <TABLE ID="VizieR_0" name="allVizieR">
+    <DESCRIPTION>all VizieR catalogues</DESCRIPTION>
+<!-- The NOMAD-1 Catalog -->
+
+    <!-- Definitions of GROUPs and FIELDs -->
+    <GROUP ID="gsed" name="_sed" ucd="phot" utype="spec:PhotometryPoint">
+      <DESCRIPTION>The SED group is made of 4 columns: mean frequency, flux, flux error, and filter designation</DESCRIPTION>
+      <FIELDref ref="sed_freq" utype="photdm:PhotometryFilter.SpectralAxis.Coverage.Location.Value"/>
+      <FIELDref ref="sed_flux" utype="spec:PhotometryPoint"/>
+      <FIELDref ref="sed_eflux" utype="spec:PhotometryPointError"/>
+      <FIELDref ref="sed_filter" utype="photdm:PhotometryFilter.identifier"/>
+    </GROUP>
+    <FIELD name="_RAJ2000" ucd="pos.eq.ra" ref="J2000" datatype="double" width="13" precision="9" unit="deg">
+      <DESCRIPTION>Right ascension (FK5, Equinox=J2000.0) at Epoch=J2000, proper motions taken into account </DESCRIPTION>
+    </FIELD>
+    <FIELD name="_DEJ2000" ucd="pos.eq.dec" ref="J2000" datatype="double" width="13" precision="9" unit="deg">
+      <DESCRIPTION>Declination (FK5, Equinox=J2000.0) at Epoch=J2000, proper motions taken into account </DESCRIPTION>
+    </FIELD>
+    <FIELD name="_tabname" ucd="meta.table" datatype="char" arraysize="32*">
+      <DESCRIPTION>Table name</DESCRIPTION>
+      <LINK href="http://vizier.cds.unistra.fr/viz-bin/VizieR-5?-info=XML&amp;-out.add=.&amp;-source=${_tabname}&amp;${_ID}"/>
+    </FIELD>
+    <FIELD name="_ID" ucd="meta.id" datatype="char" arraysize="64*">
+      <DESCRIPTION>String which identifies the row</DESCRIPTION>
+    </FIELD>
+    <FIELD name="_time" ucd="time.epoch" ref="time_1" ID="_tab1_31" datatype="double" width="14" precision="6" unit="d">
+      <DESCRIPTION>time (JD) in TCB/barycenter</DESCRIPTION>
+    </FIELD>
+    <FIELD name="_etime" ucd="stat.error;time.epoch" ref="time_1" ID="_tab1_32" datatype="double" width="7" precision="1" unit="">
+      <DESCRIPTION>time error (uncertainty and time conversion)</DESCRIPTION>
+    </FIELD>
+    <FIELD ID="sed_freq" name="_sed_freq" ucd="em.freq" unit="GHz" datatype="double" width="10" precision="E6">
+      <DESCRIPTION>Mean frequency, in GHz</DESCRIPTION>
+    </FIELD>
+    <FIELD ID="sed_flux" name="_sed_flux" ucd="phot.flux.density" unit="Jy" datatype="float" width="9" precision="E3">
+      <DESCRIPTION>Corresponding flux density, in Jy</DESCRIPTION>
+    </FIELD>
+    <FIELD ID="sed_eflux" name="_sed_eflux" ucd="stat.error;phot.flux.density" unit="Jy" datatype="float" width="8" precision="E2">
+      <DESCRIPTION>Mean error (standard deviations) of flux density</DESCRIPTION>
+    </FIELD>
+    <FIELD ID="sed_filter" name="_sed_filter" ucd="meta.id;instr.filter" unit="" datatype="char" width="32" arraysize="32*">
+      <DESCRIPTION>Filter designation, in the form photoSystem:filterName; a designation starting by ':=' is an assumed monochromatic point; this column is empty when the frequency is specified for each data point.</DESCRIPTION>
+      <LINK href="http://cdsarc.u-strasbg.fr/viz-bin/metafilter?${_sed_filter}"/>
+    </FIELD>
+<DATA><TABLEDATA>
+<TR><TD>011.358400000</TD><TD>-72.879347200</TD><TD>I/297/out</TD><TD>NOMAD1===0171-0020320&amp;-c=011.3584000 -72.8793472,eq=J2000&amp;-c.rs=</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD></TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.358400000</TD><TD>-72.879347200</TD><TD>I/297/out</TD><TD>NOMAD1===0171-0020320&amp;-c=011.3584000 -72.8793472,eq=J2000&amp;-c.rs=</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD></TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.35788600</TD><TD>-72.87933300</TD><TD>I/305/out</TD><TD>GSC2.3===S0XH564587&amp;-c=011.357886 -72.879333,eq=J2000&amp;-c.rs=0.00</TD><TD></TD><TD>0.0</TD><TD>382.54e+3</TD><TD>477.e-6</TD><TD>199.e-6</TD><TD>POSS-II:i</TD></TR>
+<TR><TD>011.35788600</TD><TD>-72.87933300</TD><TD>I/305/out</TD><TD>GSC2.3===S0XH564587&amp;-c=011.357886 -72.879333,eq=J2000&amp;-c.rs=0.00</TD><TD></TD><TD>0.0</TD><TD>468.43e+3</TD><TD>555.e-6</TD><TD>231.e-6</TD><TD>POSS-II:F</TD></TR>
+<TR><TD>011.35788600</TD><TD>-72.87933300</TD><TD>I/305/out</TD><TD>GSC2.3===S0XH564587&amp;-c=011.357886 -72.879333,eq=J2000&amp;-c.rs=0.00</TD><TD></TD><TD>0.0</TD><TD>640.58e+3</TD><TD>810.e-6</TD><TD>227.e-6</TD><TD>POSS-II:J</TD></TR>
+<TR><TD>011.35776091</TD><TD>-72.87936103</TD><TD>I/317/sample</TD><TD>PPMXL=6666415428147599196&amp;-c=011.357761 -72.879361,eq=J2000&amp;-c.r</TD><TD></TD><TD>0.0</TD><TD>138.55e+3</TD><TD>398.e-6</TD><TD>79.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.35776091</TD><TD>-72.87936103</TD><TD>I/317/sample</TD><TD>PPMXL=6666415428147599196&amp;-c=011.357761 -72.879361,eq=J2000&amp;-c.r</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD>75.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.35776091</TD><TD>-72.87936103</TD><TD>I/317/sample</TD><TD>PPMXL=6666415428147599196&amp;-c=011.357761 -72.879361,eq=J2000&amp;-c.r</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD>54.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.35757899</TD><TD>-72.87938499</TD><TD>I/319/xpm</TD><TD>-c=011.357579 -72.879385,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>138.55e+3</TD><TD>398.e-6</TD><TD>79.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.35757899</TD><TD>-72.87938499</TD><TD>I/319/xpm</TD><TD>-c=011.357579 -72.879385,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD>75.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.35757899</TD><TD>-72.87938499</TD><TD>I/319/xpm</TD><TD>-c=011.357579 -72.879385,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>529.e-6</TD><TD>54.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.357654800</TD><TD>-72.879267700</TD><TD>I/320/spm4</TD><TD>-c=011.3576548 -72.8792677,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>138.55e+3</TD><TD>398.e-6</TD><TD></TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.357654800</TD><TD>-72.879267700</TD><TD>I/320/spm4</TD><TD>-c=011.3576548 -72.8792677,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD></TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.357654800</TD><TD>-72.879267700</TD><TD>I/320/spm4</TD><TD>-c=011.3576548 -72.8792677,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD></TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.357654800</TD><TD>-72.879267700</TD><TD>I/320/spm4</TD><TD>-c=011.3576548 -72.8792677,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>541.43e+3</TD><TD>604.e-6</TD><TD></TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.357654800</TD><TD>-72.879267700</TD><TD>I/320/spm4</TD><TD>-c=011.3576548 -72.8792677,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>674.90e+3</TD><TD>583.e-6</TD><TD></TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.357288300</TD><TD>-72.879199200</TD><TD>I/322A/out</TD><TD>UCAC4===086-001226&amp;-c=011.3572883 -72.8791992,eq=J2000&amp;-c.rs=0.0</TD><TD></TD><TD>0.0</TD><TD>138.55e+3</TD><TD>398.e-6</TD><TD>77.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.357288300</TD><TD>-72.879199200</TD><TD>I/322A/out</TD><TD>UCAC4===086-001226&amp;-c=011.3572883 -72.8791992,eq=J2000&amp;-c.rs=0.0</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD>74.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.357288300</TD><TD>-72.879199200</TD><TD>I/322A/out</TD><TD>UCAC4===086-001226&amp;-c=011.3572883 -72.8791992,eq=J2000&amp;-c.rs=0.0</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD>54.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.357671398422</TD><TD>-72.879232287381</TD><TD>I/337/gaia</TD><TD>-c=011.3576713984 -72.8792322874,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>445.46e+3</TD><TD>453.e-6</TD><TD></TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.357944051200</TD><TD>-72.879299170200</TD><TD>I/339/hsoy</TD><TD>-c=011.3579440512 -72.8792991702,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD>75.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.357944051200</TD><TD>-72.879299170200</TD><TD>I/339/hsoy</TD><TD>-c=011.3579440512 -72.8792991702,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD>54.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.357944051200</TD><TD>-72.879299170200</TD><TD>I/339/hsoy</TD><TD>-c=011.3579440512 -72.8792991702,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>453.e-6</TD><TD>2.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.357351236</TD><TD>-72.879205936</TD><TD>I/340/ucac5</TD><TD>-c=011.3573194 -72.8792033,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>536.e-6</TD><TD></TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.357351236</TD><TD>-72.879205936</TD><TD>I/340/ucac5</TD><TD>-c=011.3573194 -72.8792033,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD></TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.357351236</TD><TD>-72.879205936</TD><TD>I/340/ucac5</TD><TD>-c=011.3573194 -72.8792033,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>453.e-6</TD><TD></TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3578836566377</TD><TD>-72.8794592645593</TD><TD>I/345/gaia2</TD><TD>-c=011.35785325936 -72.87946487731,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>481.50e+3</TD><TD>164.e-6</TD><TD>0.e-6</TD><TD>GAIA/GAIA2:G</TD></TR>
+<TR><TD>011.3576832490698</TD><TD>-72.8792254580397</TD><TD>I/345/gaia2</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>388.10e+3</TD><TD>643.e-6</TD><TD>8.e-6</TD><TD>GAIA/GAIA2:Grp</TD></TR>
+<TR><TD>011.3576832490698</TD><TD>-72.8792254580397</TD><TD>I/345/gaia2</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>481.50e+3</TD><TD>480.e-6</TD><TD>1.e-6</TD><TD>GAIA/GAIA2:G</TD></TR>
+<TR><TD>011.3576832490698</TD><TD>-72.8792254580397</TD><TD>I/345/gaia2</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>594.10e+3</TD><TD>637.e-6</TD><TD>7.e-6</TD><TD>GAIA/GAIA2:Gbp</TD></TR>
+<TR><TD>011.3576651940887</TD><TD>-72.8792260376615</TD><TD>I/350/gaiaedr3</TD><TD>-c=011.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>393.40e+3</TD><TD>603.e-6</TD><TD>6.e-6</TD><TD>GAIA/GAIA3:Grp</TD></TR>
+<TR><TD>011.3576651940887</TD><TD>-72.8792260376615</TD><TD>I/350/gaiaedr3</TD><TD>-c=011.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>514.90e+3</TD><TD>463.e-6</TD><TD>1.e-6</TD><TD>GAIA/GAIA3:G</TD></TR>
+<TR><TD>011.3576651940887</TD><TD>-72.8792260376615</TD><TD>I/350/gaiaedr3</TD><TD>-c=011.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>595.30e+3</TD><TD>609.e-6</TD><TD>5.e-6</TD><TD>GAIA/GAIA3:Gbp</TD></TR>
+<TR><TD>011.3578488621295</TD><TD>-72.8794621145736</TD><TD>I/350/gaiaedr3</TD><TD>-c=011.35785301150 -72.87946495927,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>514.90e+3</TD><TD>162.e-6</TD><TD>1.e-6</TD><TD>GAIA/GAIA3:G</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>138.55e+3</TD><TD>356.e-6</TD><TD>36.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>181.75e+3</TD><TD>447.e-6</TD><TD>35.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>241.96e+3</TD><TD>544.e-6</TD><TD>29.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>332.44e+3</TD><TD>622.e-6</TD><TD>21.e-6</TD><TD>SDSS:z</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>392.66e+3</TD><TD>594.e-6</TD><TD>16.e-6</TD><TD>SDSS:i</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>445.46e+3</TD><TD>543.e-6</TD><TD>5.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>445.46e+3</TD><TD>740.e-6</TD><TD>9.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>445.46e+3</TD><TD>439.e-6</TD><TD>1.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>479.90e+3</TD><TD>648.e-6</TD><TD>6.e-6</TD><TD>SDSS:r</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>621.98e+3</TD><TD>677.e-6</TD><TD>12.e-6</TD><TD>SDSS:g</TD></TR>
+<TR><TD>011.3576832490702</TD><TD>-72.8792254580398</TD><TD>I/353/gsc242</TD><TD>-c=011.35767018082 -72.87923235680,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>851.92e+3</TD><TD>150.e-6</TD><TD>4.e-6</TD><TD>SDSS:u</TD></TR>
+<TR><TD>011.3578836566374</TD><TD>-72.8794592645592</TD><TD>I/353/gsc242</TD><TD>-c=011.35785325936 -72.87946487731,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>138.55e+3</TD><TD>404.e-6</TD><TD>43.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.3578836566374</TD><TD>-72.8794592645592</TD><TD>I/353/gsc242</TD><TD>-c=011.35785325936 -72.87946487731,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>181.75e+3</TD><TD>412.e-6</TD><TD>44.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.3578836566374</TD><TD>-72.8794592645592</TD><TD>I/353/gsc242</TD><TD>-c=011.35785325936 -72.87946487731,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>241.96e+3</TD><TD>596.e-6</TD><TD>29.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.3578836566374</TD><TD>-72.8794592645592</TD><TD>I/353/gsc242</TD><TD>-c=011.35785325936 -72.87946487731,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>445.46e+3</TD><TD>150.e-6</TD><TD>0.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3576340000000</TD><TD>-72.8793790000000</TD><TD>I/353/gsc242</TD><TD>-c=011.35763400000 -72.87937900000,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>138.55e+3</TD><TD>398.e-6</TD><TD>79.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.3576340000000</TD><TD>-72.8793790000000</TD><TD>I/353/gsc242</TD><TD>-c=011.35763400000 -72.87937900000,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD>75.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.3576340000000</TD><TD>-72.8793790000000</TD><TD>I/353/gsc242</TD><TD>-c=011.35763400000 -72.87937900000,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>241.96e+3</TD><TD>529.e-6</TD><TD>54.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.3576651940887</TD><TD>-72.8792260376615</TD><TD>I/355/gaiadr3</TD><TD>-c=011.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>393.40e+3</TD><TD>603.e-6</TD><TD>6.e-6</TD><TD>GAIA/GAIA3:Grp</TD></TR>
+<TR><TD>011.3576651940887</TD><TD>-72.8792260376615</TD><TD>I/355/gaiadr3</TD><TD>-c=011.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>514.90e+3</TD><TD>463.e-6</TD><TD>1.e-6</TD><TD>GAIA/GAIA3:G</TD></TR>
+<TR><TD>011.3576651940887</TD><TD>-72.8792260376615</TD><TD>I/355/gaiadr3</TD><TD>-c=011.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>595.30e+3</TD><TD>609.e-6</TD><TD>5.e-6</TD><TD>GAIA/GAIA3:Gbp</TD></TR>
+<TR><TD>011.3578488621295</TD><TD>-72.8794621145736</TD><TD>I/355/gaiadr3</TD><TD>-c=011.35785301150 -72.87946495927,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>514.90e+3</TD><TD>162.e-6</TD><TD>1.e-6</TD><TD>GAIA/GAIA3:G</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>546.e-6</TD><TD></TD><TD>Cousins:I</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>392.66e+3</TD><TD>560.e-6</TD><TD></TD><TD>SDSS:i</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>392.66e+3</TD><TD>570.e-6</TD><TD></TD><TD>SDSS:i</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>463.43e+3</TD><TD>528.e-6</TD><TD></TD><TD>Cousins:R</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>479.90e+3</TD><TD>536.e-6</TD><TD></TD><TD>SDSS:r</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>548.10e+3</TD><TD>547.e-6</TD><TD></TD><TD>Cousins:V</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>621.98e+3</TD><TD>634.e-6</TD><TD></TD><TD>SDSS:g</TD></TR>
+<TR><TD>11.3576705089650</TD><TD>-72.8792325268108</TD><TD>I/360/syntphot</TD><TD>-c= 11.35767050897 -72.87923252681,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>687.60e+3</TD><TD>670.e-6</TD><TD></TD><TD>Cousins:B</TD></TR>
+<TR><TD>011.35763400</TD><TD>-72.87937900</TD><TD>II/246/out</TD><TD>2MASS===00452583-7252457 &amp;-c=011.357634 -72.879379,eq=J2000&amp;-c.r</TD><TD>2451034.713200</TD><TD>4700.0</TD><TD>136.89e+3</TD><TD>203.e-6</TD><TD>151.e-6</TD><TD>Johnson:K</TD></TR>
+<TR><TD>011.35763400</TD><TD>-72.87937900</TD><TD>II/246/out</TD><TD>2MASS===00452583-7252457 &amp;-c=011.357634 -72.879379,eq=J2000&amp;-c.r</TD><TD>2451034.713200</TD><TD>4700.0</TD><TD>136.89e+3</TD><TD>385.e-6</TD><TD>76.e-6</TD><TD>Johnson:K</TD></TR>
+<TR><TD>011.35763400</TD><TD>-72.87937900</TD><TD>II/246/out</TD><TD>2MASS===00452583-7252457 &amp;-c=011.357634 -72.879379,eq=J2000&amp;-c.r</TD><TD>2451034.713200</TD><TD>4700.0</TD><TD>183.92e+3</TD><TD>303.e-6</TD><TD>121.e-6</TD><TD>Johnson:H</TD></TR>
+<TR><TD>011.35763400</TD><TD>-72.87937900</TD><TD>II/246/out</TD><TD>2MASS===00452583-7252457 &amp;-c=011.357634 -72.879379,eq=J2000&amp;-c.r</TD><TD>2451034.713200</TD><TD>4700.0</TD><TD>183.92e+3</TD><TD>530.e-6</TD><TD>74.e-6</TD><TD>Johnson:H</TD></TR>
+<TR><TD>011.35763400</TD><TD>-72.87937900</TD><TD>II/246/out</TD><TD>2MASS===00452583-7252457 &amp;-c=011.357634 -72.879379,eq=J2000&amp;-c.r</TD><TD>2451034.713200</TD><TD>4700.0</TD><TD>239.83e+3</TD><TD>447.e-6</TD><TD>94.e-6</TD><TD>Johnson:J</TD></TR>
+<TR><TD>011.35763400</TD><TD>-72.87937900</TD><TD>II/246/out</TD><TD>2MASS===00452583-7252457 &amp;-c=011.357634 -72.879379,eq=J2000&amp;-c.r</TD><TD>2451034.713200</TD><TD>4700.0</TD><TD>239.83e+3</TD><TD>541.e-6</TD><TD>55.e-6</TD><TD>Johnson:J</TD></TR>
+<TR><TD>011.3577080</TD><TD>-72.8793610</TD><TD>II/288/out</TD><TD>IRSF===00452585-7252457&amp;-c=011.35771 -72.87936,eq=J2000&amp;-c.rs=0.</TD><TD></TD><TD>0.0</TD><TD>136.89e+3</TD><TD>237.e-6</TD><TD>22.e-6</TD><TD>Johnson:K</TD></TR>
+<TR><TD>011.3577080</TD><TD>-72.8793610</TD><TD>II/288/out</TD><TD>IRSF===00452585-7252457&amp;-c=011.35771 -72.87936,eq=J2000&amp;-c.rs=0.</TD><TD></TD><TD>0.0</TD><TD>183.92e+3</TD><TD>354.e-6</TD><TD>26.e-6</TD><TD>Johnson:H</TD></TR>
+<TR><TD>011.3577080</TD><TD>-72.8793610</TD><TD>II/288/out</TD><TD>IRSF===00452585-7252457&amp;-c=011.35771 -72.87936,eq=J2000&amp;-c.rs=0.</TD><TD></TD><TD>0.0</TD><TD>239.83e+3</TD><TD>460.e-6</TD><TD>17.e-6</TD><TD>Johnson:J</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>51.688e+3</TD><TD>91.0e-6</TD><TD>11.0e-6</TD><TD>:=5.8um</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>52.311e+3</TD><TD>91.5e-6</TD><TD>10.6e-6</TD><TD>Spitzer/IRAC:5.8</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>66.621e+3</TD><TD>79.0e-6</TD><TD>14.0e-6</TD><TD>:=4.5um</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>66.724e+3</TD><TD>78.8e-6</TD><TD>14.1e-6</TD><TD>Spitzer/IRAC:4.5</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>83.276e+3</TD><TD>163.e-6</TD><TD>15.e-6</TD><TD>:=3.6um</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>84.449e+3</TD><TD>162.e-6</TD><TD>15.e-6</TD><TD>Spitzer/IRAC:3.6</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>138.15e+3</TD><TD>352.e-6</TD><TD>36.e-6</TD><TD>:=2.17um</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>138.55e+3</TD><TD>356.e-6</TD><TD>36.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>181.69e+3</TD><TD>436.e-6</TD><TD>34.e-6</TD><TD>:=1.65um</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>447.e-6</TD><TD>35.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>239.83e+3</TD><TD>550.e-6</TD><TD>30.e-6</TD><TD>:=1.250um</TD></TR>
+<TR><TD>011.35747099</TD><TD>-72.87929904</TD><TD>II/305/archive</TD><TD>SSTISAGEMA===J004525.79-725245.4&amp;-c=011.357471 -72.879299,eq=J20</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>544.e-6</TD><TD>30.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.35776781</TD><TD>-72.87936663</TD><TD>II/351/vmc_dr4</TD><TD>SrcID=558348226792&amp;-c=011.357768 -72.879367,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>140.50e+3</TD><TD>181.e-6</TD><TD>4.e-6</TD><TD>VISTA:Ks</TD></TR>
+<TR><TD>011.35776781</TD><TD>-72.87936663</TD><TD>II/351/vmc_dr4</TD><TD>SrcID=558348226792&amp;-c=011.357768 -72.879367,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>240.53e+3</TD><TD>412.e-6</TD><TD>5.e-6</TD><TD>VISTA:J</TD></TR>
+<TR><TD>011.35776781</TD><TD>-72.87936663</TD><TD>II/351/vmc_dr4</TD><TD>SrcID=558348226792&amp;-c=011.357768 -72.879367,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD></TD><TD>294.38e+3</TD><TD>881.e-6</TD><TD>6.e-6</TD><TD>VISTA:Y</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>329.80e+3</TD><TD>387.e-6</TD><TD>21.e-6</TD><TD>SkyMapper/SkyMapper:z</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>329.80e+3</TD><TD>382.e-6</TD><TD>13.e-6</TD><TD>SkyMapper/SkyMapper:z</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>388.70e+3</TD><TD>418.e-6</TD><TD>38.e-6</TD><TD>SkyMapper/SkyMapper:i</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>388.70e+3</TD><TD>407.e-6</TD><TD>11.e-6</TD><TD>SkyMapper/SkyMapper:i</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>496.30e+3</TD><TD>508.e-6</TD><TD>40.e-6</TD><TD>SkyMapper/SkyMapper:r</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>496.30e+3</TD><TD>566.e-6</TD><TD>5.e-6</TD><TD>SkyMapper/SkyMapper:r</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>603.40e+3</TD><TD>701.e-6</TD><TD>93.e-6</TD><TD>SkyMapper/SkyMapper:g</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>603.40e+3</TD><TD>703.e-6</TD><TD>12.e-6</TD><TD>SkyMapper/SkyMapper:g</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>774.50e+3</TD><TD>248.e-6</TD><TD>41.e-6</TD><TD>SkyMapper/SkyMapper:v</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>774.50e+3</TD><TD>362.e-6</TD><TD>10.e-6</TD><TD>SkyMapper/SkyMapper:v</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>857.00e+3</TD><TD>48.8e-6</TD><TD>8.9e-6</TD><TD>SkyMapper/SkyMapper:u</TD></TR>
+<TR><TD>011.35778999329</TD><TD>-72.87929999828</TD><TD>II/358/smss</TD><TD>-c=011.357789993 -72.879299998,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>857.00e+3</TD><TD>53.7e-6</TD><TD>1.3e-6</TD><TD>SkyMapper/SkyMapper:u</TD></TR>
+<TR><TD>011.358163850</TD><TD>-72.879338358</TD><TD>II/363/unwise</TD><TD>-c=011.3581638 -72.8793384,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>65.172e+3</TD><TD>136.e-6</TD><TD>4.e-6</TD><TD>WISE:W2</TD></TR>
+<TR><TD>011.358163850</TD><TD>-72.879338358</TD><TD>II/363/unwise</TD><TD>-c=011.3581638 -72.8793384,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>89.490e+3</TD><TD>270.e-6</TD><TD>2.e-6</TD><TD>WISE:W1</TD></TR>
+<TR><TD>011.357887926</TD><TD>-72.879353696</TD><TD>II/365/catwise</TD><TD>-c=011.3578879 -72.8793537,eq=ICRS&amp;-c.rs=0.004</TD><TD>2457192.494262</TD><TD>4700.0</TD><TD>65.172e+3</TD><TD>113.e-6</TD><TD>4.e-6</TD><TD>WISE:W2</TD></TR>
+<TR><TD>011.357887926</TD><TD>-72.879353696</TD><TD>II/365/catwise</TD><TD>-c=011.3578879 -72.8793537,eq=ICRS&amp;-c.rs=0.004</TD><TD>2457192.494262</TD><TD>4700.0</TD><TD>89.490e+3</TD><TD>257.e-6</TD><TD>5.e-6</TD><TD>WISE:W1</TD></TR>
+<TR><TD>011.357383169</TD><TD>-72.879218377</TD><TD>II/368/sstsl2</TD><TD>-c=011.3573832 -72.8792184,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>38.083e+3</TD><TD>34.6e-6</TD><TD>4.3e-6</TD><TD>Spitzer/IRAC:8.0</TD></TR>
+<TR><TD>011.357383169</TD><TD>-72.879218377</TD><TD>II/368/sstsl2</TD><TD>-c=011.3573832 -72.8792184,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>52.311e+3</TD><TD>78.5e-6</TD><TD>3.2e-6</TD><TD>Spitzer/IRAC:5.8</TD></TR>
+<TR><TD>011.357383169</TD><TD>-72.879218377</TD><TD>II/368/sstsl2</TD><TD>-c=011.3573832 -72.8792184,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>66.724e+3</TD><TD>123.e-6</TD><TD>1.e-6</TD><TD>Spitzer/IRAC:4.5</TD></TR>
+<TR><TD>011.357383169</TD><TD>-72.879218377</TD><TD>II/368/sstsl2</TD><TD>-c=011.3573832 -72.8792184,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>84.449e+3</TD><TD>183.e-6</TD><TD>1.e-6</TD><TD>Spitzer/IRAC:3.6</TD></TR>
+<TR><TD>011.357383169</TD><TD>-72.879218377</TD><TD>II/368/sstsl2</TD><TD>-c=011.3573832 -72.8792184,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>138.55e+3</TD><TD>386.e-6</TD><TD>76.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.357383169</TD><TD>-72.879218377</TD><TD>II/368/sstsl2</TD><TD>-c=011.3573832 -72.8792184,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>512.e-6</TD><TD>71.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.357383169</TD><TD>-72.879218377</TD><TD>II/368/sstsl2</TD><TD>-c=011.3573832 -72.8792184,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>528.e-6</TD><TD>54.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.35776805</TD><TD>-72.87936891</TD><TD>II/375/vmc_dr6</TD><TD>SrcID=558357990298&amp;-c=011.357768 -72.879369,eq=J2000&amp;-c.rs=0.004</TD><TD>2455887.760538</TD><TD>1160.0</TD><TD>140.50e+3</TD><TD>262.e-6</TD><TD>5.e-6</TD><TD>VISTA:Ks</TD></TR>
+<TR><TD>011.35776805</TD><TD>-72.87936891</TD><TD>II/375/vmc_dr6</TD><TD>SrcID=558357990298&amp;-c=011.357768 -72.879369,eq=J2000&amp;-c.rs=0.004</TD><TD>2455887.760538</TD><TD>1160.0</TD><TD>240.53e+3</TD><TD>365.e-6</TD><TD>4.e-6</TD><TD>VISTA:J</TD></TR>
+<TR><TD>011.35776805</TD><TD>-72.87936891</TD><TD>II/375/vmc_dr6</TD><TD>SrcID=558357990298&amp;-c=011.357768 -72.879369,eq=J2000&amp;-c.rs=0.004</TD><TD>2455887.760538</TD><TD>1160.0</TD><TD>294.38e+3</TD><TD>528.e-6</TD><TD>7.e-6</TD><TD>VISTA:Y</TD></TR>
+<TR><TD>011.3578836566713</TD><TD>-72.8794592645432</TD><TD>IV/38/tic</TD><TD>-c=011.35788365667 -72.87945926454,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>150.e-6</TD><TD>0.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/38/tic</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>138.55e+3</TD><TD>398.e-6</TD><TD>79.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/38/tic</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>183.92e+3</TD><TD>530.e-6</TD><TD>74.e-6</TD><TD>Johnson:H</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/38/tic</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>239.83e+3</TD><TD>541.e-6</TD><TD>55.e-6</TD><TD>Johnson:J</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/38/tic</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>439.e-6</TD><TD>1.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/38/tic</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>852.e-6</TD><TD>1059.e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/38/tic</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>59.2e-6</TD><TD>8.4e-6</TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/39/tic82</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>138.55e+3</TD><TD>398.e-6</TD><TD>79.e-6</TD><TD>2MASS:Ks</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/39/tic82</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>183.92e+3</TD><TD>530.e-6</TD><TD>74.e-6</TD><TD>Johnson:H</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/39/tic82</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>239.83e+3</TD><TD>541.e-6</TD><TD>55.e-6</TD><TD>Johnson:J</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/39/tic82</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>439.e-6</TD><TD>1.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/39/tic82</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>852.e-6</TD><TD>1059.e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3579526165674</TD><TD>-72.8793014500088</TD><TD>IV/39/tic82</TD><TD>-c=011.35795261657 -72.87930145001,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>59.2e-6</TD><TD>8.4e-6</TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.3578836566713</TD><TD>-72.8794592645432</TD><TD>IV/39/tic82</TD><TD>-c=011.35788365667 -72.87945926454,eq=J2000&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>150.e-6</TD><TD>0.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3576831967</TD><TD>-72.8792254711</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35767018 -72.87923236,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD>74.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.3576831967</TD><TD>-72.8792254711</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35767018 -72.87923236,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD>53.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.3576831967</TD><TD>-72.8792254711</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35767018 -72.87923236,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>740.e-6</TD><TD>9.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3576831967</TD><TD>-72.8792254711</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35767018 -72.87923236,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>543.e-6</TD><TD>5.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3576831967</TD><TD>-72.8792254711</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35767018 -72.87923236,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>439.e-6</TD><TD>1.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3578835352</TD><TD>-72.8794592828</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35785326 -72.87946488,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>535.e-6</TD><TD>74.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.3578835352</TD><TD>-72.8794592828</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35785326 -72.87946488,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>241.96e+3</TD><TD>530.e-6</TD><TD>53.e-6</TD><TD>2MASS:J</TD></TR>
+<TR><TD>011.3578835352</TD><TD>-72.8794592828</TD><TD>J/ApJ/867/105/refcat2</TD><TD>-c=011.35785326 -72.87946488,eq=ICRS&amp;-c.rs=0.004</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>150.e-6</TD><TD>0.e-6</TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3577083</TD><TD>-72.8792222</TD><TD>J/ApJS/259/16/hbs</TD><TD>recno=957</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>371.e-6</TD><TD></TD><TD>Cousins:I</TD></TR>
+<TR><TD>011.35767018082209745</TD><TD>-72.87923235680129608</TD><TD>J/A+A/616/A12/tabled3</TD><TD>recno=9488425</TD><TD></TD><TD>0.0</TD><TD>445.46e+3</TD><TD>439.e-6</TD><TD></TD><TD>Gaia:G</TD></TR>
+<TR><TD>011.3579250</TD><TD>-72.8790900</TD><TD>J/AJ/123/855/table1</TD><TD>recno=1487529</TD><TD></TD><TD>0.0</TD><TD>138.79e+3</TD><TD>394.e-6</TD><TD>80.e-6</TD><TD>DENIS:Ks</TD></TR>
+<TR><TD>011.3579250</TD><TD>-72.8790900</TD><TD>J/AJ/123/855/table1</TD><TD>recno=1487529</TD><TD></TD><TD>0.0</TD><TD>181.75e+3</TD><TD>545.e-6</TD><TD>75.e-6</TD><TD>2MASS:H</TD></TR>
+<TR><TD>011.3579250</TD><TD>-72.8790900</TD><TD>J/AJ/123/855/table1</TD><TD>recno=1487529</TD><TD></TD><TD>0.0</TD><TD>241.77e+3</TD><TD>602.e-6</TD><TD>57.e-6</TD><TD>DENIS:J</TD></TR>
+<TR><TD>011.3579250</TD><TD>-72.8790900</TD><TD>J/AJ/123/855/table1</TD><TD>recno=1487529</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>350.e-6</TD><TD>26.e-6</TD><TD>Cousins:I</TD></TR>
+<TR><TD>011.3579250</TD><TD>-72.8790900</TD><TD>J/AJ/123/855/table1</TD><TD>recno=1487529</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>500.e-6</TD><TD>112.e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3579250</TD><TD>-72.8790900</TD><TD>J/AJ/123/855/table1</TD><TD>recno=1487529</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>748.e-6</TD><TD>16.e-6</TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.3579250</TD><TD>-72.8790900</TD><TD>J/AJ/123/855/table1</TD><TD>recno=1487529</TD><TD></TD><TD>0.0</TD><TD>849.03e+3</TD><TD>276.e-6</TD><TD>14.e-6</TD><TD>Johnson:U</TD></TR>
+<TR><TD>011.3576250</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=504880</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>365.e-6</TD><TD>47.e-6</TD><TD>Cousins:I</TD></TR>
+<TR><TD>011.3576250</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=504880</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>439.e-6</TD><TD>59.e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3576250</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=504880</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>574.e-6</TD><TD>52.e-6</TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.3576667</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=456322</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>358.e-6</TD><TD>63.e-6</TD><TD>Cousins:I</TD></TR>
+<TR><TD>011.3576667</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=456322</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>527.e-6</TD><TD>25.e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3576667</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=456322</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>574.e-6</TD><TD>50.e-6</TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.3577917</TD><TD>-72.8793333</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=504931</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>271.e-6</TD><TD>11.e-6</TD><TD>Cousins:I</TD></TR>
+<TR><TD>011.3577917</TD><TD>-72.8793333</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=504931</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>179.e-6</TD><TD>12.e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3577917</TD><TD>-72.8793333</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=504931</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>85.9e-6</TD><TD>24.5e-6</TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.3578333</TD><TD>-72.8793611</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=456619</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>261.e-6</TD><TD>15.e-6</TD><TD>Cousins:I</TD></TR>
+<TR><TD>011.3578333</TD><TD>-72.8793611</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=456619</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>167.e-6</TD><TD>11.e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3578333</TD><TD>-72.8793611</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=456619</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>92.6e-6</TD><TD>13.4e-6</TD><TD>Johnson:B</TD></TR>
+<TR><TD>011.3582083</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=505775</TD><TD></TD><TD>0.0</TD><TD>380.16e+3</TD><TD>48.6e-6</TD><TD>28.3e-6</TD><TD>Cousins:I</TD></TR>
+<TR><TD>011.3582083</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=505775</TD><TD></TD><TD>0.0</TD><TD>541.43e+3</TD><TD>63.5e-6</TD><TD>36.5e-6</TD><TD>Johnson:V</TD></TR>
+<TR><TD>011.3582083</TD><TD>-72.8791111</TD><TD>J/AcA/48/147/smc_sc</TD><TD>recno=505775</TD><TD></TD><TD>0.0</TD><TD>674.90e+3</TD><TD>29.4e-6</TD><TD>14.8e-6</TD><TD>Johnson:B</TD></TR>
+</TABLEDATA></DATA>
+<INFO name="matches" value="42">matching records</INFO>
+
+<INFO name="Warning" value="increase the precision for computed column 11"/>
+<INFO name="Warning" value="increase the precision for computed column 11"/>
+<INFO name="Warning" value="increase the precision for computed column 11"/>
+<INFO name="Warning" value="increase the precision for computed column 11"/>
+<INFO name="Warning" value="increase the precision for computed column 10"/>
+<INFO name="Warning" value="vc_coo: explicit note that pmRA does NOT contain cos(DE) factor"/>
+<INFO name="Warning" value="(patch vizier 20171220) accept several mainpos to add _V column"/>
+<INFO name="Warning" value="change VO format int  (%02d) to char"/>
+<INFO name="Warning" value="change VO format int  (%02d) to char"/>
+<INFO name="Warning" value="change VO format int  (%02d) to char"/>
+<INFO name="Warning" value="change VO format int  (%05d) to char"/>
+<INFO name="Warning" value="(patch vizier 20171220) accept several mainpos to add _V column"/>
+<INFO name="Warning" value="(patch vizier 20171220) accept several mainpos to add _V column"/>
+<INFO name="Warning" value="SED skip value for I/360/syntphot.FF814W=0.000000 "/>
+<INFO name="Warning" value="SED skip value for I/360/syntphot.FI=0.000000 "/>
+<INFO name="Warning" value="SED skip value for I/360/syntphot.FR=0.000000 "/>
+<INFO name="Warning" value="SED skip value for I/360/syntphot.FF606W=0.000000 "/>
+<INFO name="Warning" value="SED skip value for I/360/syntphot.FV=0.000000 "/>
+<INFO name="Warning" value="SED skip value for I/360/syntphot.FB=0.000000 "/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Error" value="(warning) request has failed or has been deconnected [code=65]....pipe error: /home/cds/httpd/ext-tsv/qat2s_asu --source=2m"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%011lld) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%010d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%010d) to char"/>
+<INFO name="Warning" value="change VO format int  (%010d) to char"/>
+<INFO name="Warning" value="change VO format int  (%010d) to char"/>
+<INFO name="Warning" value="change VO format int  (%010d) to char"/>
+<INFO name="Warning" value="change VO format int  (%010d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%03d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%02d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="Format '%98.15f' too wide for 'J/A+A/691/A242/tessobaf'.'b_Dist' (98 &gt;= 32)"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%05d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="change VO format int  (%04d) to char"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="Warning" value="vc_coo can't change epoch"/>
+<INFO name="QUERY_STATUS" value="ERROR">
+(warning) request has failed or has been deconnected [code=65]....pipe error: /home/cds/httpd/ext-tsv/qat2s_asu --source=2m
+</INFO>
+  </TABLE>
+</RESOURCE>
+</VOTABLE>
