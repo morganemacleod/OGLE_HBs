@@ -2,6 +2,7 @@ class Constants():
     def __init__(self):
         self.msun = 1.989e33
         self.rsun = 6.955e10
+        self.lsun = 3.846e33
         self.G  = 6.674e-8
         self.yr = 3.1536e7
         self.h  = 6.6260755e-27
