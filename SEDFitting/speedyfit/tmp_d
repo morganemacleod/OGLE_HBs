@@ -1,0 +1,16 @@
+speedyfit fit "OGLE SMC-HB-0006_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0007_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0010_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0012_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0013_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0014_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0017_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0021_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0024_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0025_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0028_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0029_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0031_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0033_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0035_setup_kurucz_m05_31.yaml" --noplot
+speedyfit fit "OGLE SMC-HB-0037_setup_kurucz_m05_31.yaml" --noplot

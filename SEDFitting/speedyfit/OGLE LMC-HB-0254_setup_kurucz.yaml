@@ -1,0 +1,44 @@
+
+# photometry file with index to the columns containing the photbands, observations and errors
+objectname: OGLE LMC-HB-0254
+photometryfile: OGLE LMC-HB-0254.phot
+photband_index: band
+obs_index: flux
+err_index: eflux
+#photband_exclude: ['GALEX', 'SKYMAPPER', 'SDSS', 'WISE.W3', 'WISE.W4']
+photband_exclude: ['WISE.W3','WISE.W4']
+# parameters to fit and the limits on them in same order as parameters
+pnames: [teff,logg, rad,ebv,lne]
+limits: 
+- [3500, 49000]
+- [0.0, 4.5]
+- [0.01, 1000]
+- [0.0, 1.0]
+- [-10,-2]
+# constraints on distance and mass ratio is known
+constraints:
+ distance: [49590,1000]
+# added constraints on derived properties as mass, luminosity, luminosity ratio
+derived_limits: {}
+# path to the model grids with integrated photometry
+grids: 
+- kurucz_m05_31
+# setup for the MCMC algorithm
+nwalkers: 100    # total number of walkers
+nsteps: 3000     # steps taken by each walker (not including burn-in)
+nrelax: 500      # burn-in steps taken by each walker
+a: 10            # relative size of the steps taken
+# set the percentiles for the error determination 
+percentiles: [16, 50, 84] # 16 - 84 corresponds to 1 sigma
+# output options
+resultfile: OGLE LMC-HB-0254_results_kurucz.csv   # filepath to write results
+h5file: OGLE LMC-HB-0254_summary.h5
+plot1:
+ type: sed_fit
+ result: best
+ path: OGLE LMC-HB-0254_sed_kurucz.png
+plot2:
+ type: distribution
+ show_best: true
+ path: OGLE LMC-HB-0254_distribution_kurucz.png
+ parameters: ['teff','rad','ebv','lne']

@@ -1,0 +1,10 @@
+# order to process files
+python generate_hb_scripts.py initial
+sh script_get_all_photometry.sh
+python generate_hb_scripts.py cleanphot
+sh script_setup_all_fits.sh
+sh script_run_all_fits.sh
+python generate_hb_scripts.py check
+sh script_setup_all_refits.sh
+sh script_run_all_refits.sh
+python maketable.py
