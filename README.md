@@ -11,3 +11,6 @@ isochrones version: 2.1
 SED fitting performed with the fork of the speedyfit code available
 here:
 https://github.com/morganemacleod/speedyfit
+
+
+This version tagged on Zenodo at: [![DOI](https://zenodo.org/badge/895640737.svg)](https://doi.org/10.5281/zenodo.20528563) 
